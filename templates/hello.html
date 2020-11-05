@@ -1,0 +1,24 @@
+<!doctype html>
+<title>Hello from Rotor planet!</title>
+<body style="background: black; background: url(img/{{ rocket }}.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;"></body>
+<div style="color: #e4e4e4;
+    text-align:  center;
+    height: 90px;
+    vertical-align:  middle;">
+{% if name %}
+  <h1>Hello from {{ name }}!</h1>
+{% else %}
+  <h1>Rocket is ready, Commander! Its a {{ rocket }} size!</h1>
+{% endif %}
+
+  {% if contents %}
+  <textarea rows="10" cols="50">
+    {{ contents }}
+  </textarea>
+  {% endif %}
+
+</div>
