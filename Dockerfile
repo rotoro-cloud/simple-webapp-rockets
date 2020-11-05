@@ -8,7 +8,7 @@ EXPOSE 8080
 
 WORKDIR /opt
 
-ENV VERSION=v3
-ENV ROCKET_SIZE=big
+ENV VERSION=v2
+ENV ROCKET_SIZE=average
 
 ENTRYPOINT ["python3", "app.py"]
