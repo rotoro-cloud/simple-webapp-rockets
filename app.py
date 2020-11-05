@@ -8,9 +8,9 @@ import os
 app = Flask(__name__)
 
 rockets = {
-    "small": "small.jpg",
-    "average": "average.jpg",
-    "big": "big.jpg",
+    "small": "small",
+    "average": "average",
+    "big": "big",
 }
 
 rocket = os.environ.get('APP_ROCKET') or random.choice(["small","average","big"])
@@ -27,7 +27,11 @@ def new_rocket(new_rocket):
 
 @app.route('/read_file')
 def read_file():
-    f = open("/data/testfile.txt")
+    THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+    print(THIS_FOLDER);
+    my_file = THIS_FOLDER + "/data/testfile.txt"
+    print(my_file);
+    f = open(my_file)
     contents = f.read()
     return render_template('hello.html', name=socket.gethostname(), contents=contents, rocket=rockets[rocket])
 
