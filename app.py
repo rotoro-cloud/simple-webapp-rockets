@@ -32,7 +32,7 @@ def main():
 @app.route("/info")
 def info():
     #return 'Info'
-    return "App Version: {} ; Rocket Size: {}".format(VERSION_ENV, rocket)
+    return "App Version: {} ; Rocket Size: {} ; ".format(VERSION_ENV, rocket)
 
 @app.route("/version")
 def version():
