@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 ROCKET_PORT = os.environ.get('ROCKET_PORT') or '8080'
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
-VERSION_ENV = os.environ.get('VERSION') or 'v1'
+VERSION_ENV = os.environ.get('VERSION') or 'v0.1'
 
 rockets = {
     "small": "small",
