@@ -8,7 +8,4 @@ EXPOSE 8080
 
 WORKDIR /opt
 
-ENV VERSION=v1
-ENV ROCKET_SIZE=small
-
 ENTRYPOINT ["python3", "app.py"]
