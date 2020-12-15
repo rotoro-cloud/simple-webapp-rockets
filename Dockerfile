@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:3.6-alpine
 
 RUN pip install flask
 
@@ -8,7 +8,7 @@ EXPOSE 8080
 
 WORKDIR /opt
 
-ENV VERSION=v1
-ENV ROCKET_SIZE=small
+ENV VERSION=v2
+ENV ROCKET_SIZE=average
 
 ENTRYPOINT ["python3", "app.py"]
